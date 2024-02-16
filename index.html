@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.main-div{
+             position: fixed;
+             top: 0px;
+             left: 0px;
+             height: 100vh;
+             width: 100%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background-image: url("https://i.pinimg.com/474x/ca/e8/bc/cae8bc6fadb950e3c519f16d81cce800.jpg");
+             background-repeat: no-repeat;
+             background-size: cover;
+             
+
+		}
+		.container{
+			width: 210px;
+			height: 350px;
+			border-radius: 40px;
+			box-shadow: 0px 0px 50px grey;
+			padding: 20px;
+			background-color: white;
+
+		}
+		input{
+			height: 40px;
+			width: 40px;
+			margin: 4px;
+			border: none;
+			border-radius: 5px;
+			background-color: grey;
+			color: white;
+			font-family: Arial Black;
+			font-size: 15px;
+
+		}
+		.equal{
+			width: 92px;
+			margin-left: 2px;
+			background-color: orange;
+		}
+		.op{
+             background-color: transparent;
+             border: none;
+             outline: none;
+             box-shadow: 0px 0px 2px grey;
+             width: 90%;
+             color: black;
+             text-align: right;
+
+		}
+		.opr{
+background-color: orange;
+		}
+		input:hover{
+			background-color: red;
+		}
+		.ac{
+			background-color: green;
+		}
+		.c{
+			background-color: blue;
+		}
+		.num{
+/*			background-color: greenyellow;*/
+		}
+		.dot{
+			background-color: royalblue;
+		}
+	</style>
+</head>
+<body>
+<div class="main-div">
+	<div class="container" align="center">
+		<form>
+		<div>
+			<input type="text" name="op" disabled class="op">
+		</div>
+		<div>
+			<input type="button" name="clr" value="C" class="c">
+			<input type="button" name="alcr" value="AC" onclick="op.value=' ' " class="ac">
+			<input type="button" name="div" value="/" onclick="op.value+= '/' " class="opr">
+			<input type="button" name="mod" value="%" onclick="op.value+='%' " class="opr">
+		</div>
+		<div>
+			<input type="button" name="num" value="9" onclick="op.value+='9' " class="num">
+			<input type="button" name="num" value="8" onclick="op.value+='8' " class="num">
+			<input type="button" name="num" value="7" onclick="op.value+='7' " class="num">
+			<input type="button" name="num" value="+" onclick="op.value+='+' " class="opr">
+		</div>
+		<div>
+			<input type="button" name="num" value="6" onclick="op.value+='6' " class="num">
+			<input type="button" name="num" value="5" onclick="op.value+='5' " class="num">
+			<input type="button" name="num" value="4" onclick="op.value+='4' " class="num">
+			<input type="button" name="num" value="-" onclick="op.value+='-' " class="opr">
+		</div>
+		<div>
+			<input type="button" name="num" value="3" onclick="op.value+='3' " class="num">
+			<input type="button" name="num" value="2" onclick="op.value+='2' " class="num">
+			<input type="button" name="num" value="1" onclick="op.value+='1' " class="num">
+			<input type="button" name="num" value="*" onclick="op.value+='*' " class="opr"	>
+		</div>
+		<div>
+			<input type="button" name="num" value="0" onclick="op.value= " class="num">
+			<input type="button" name="num" value="." onclick="op.value= " class="dot">
+			<input type="button" name="equal" value="=" onclick="op.value=eval(op.value)" class="equal" class="opr">
+			<!-- <input type="button" name="mod" value="%" onclick="op.value= "> -->
+		</div>
+	</form>
+	</div>
+</div>
+</body>
+</html>
